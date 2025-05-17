@@ -1,130 +1,112 @@
-# Task Tracker Application
+# Task Tracker 🚀
 
-![Task Tracker Demo](demo-screenshot.png) <!-- Add screenshot later -->
+A modern task management web application built with React, TypeScript, and local storage persistence.
 
-A modern task management web application built with React and TypeScript, featuring user authentication, project organization, and task tracking capabilities.
+![Task Tracker Preview](./public/preview.png) <!-- Add your screenshot later -->
 
-## Features
+## Features ✨
 
 - **User Authentication**
-  - Sign up with name, email, password, and country
-  - Login/logout functionality
-  - Persistent sessions using localStorage
+  - Secure signup/login with email & password
+  - Persistent session using localStorage
+  - User-specific data isolation
 
 - **Project Management**
   - Create/delete projects
-  - Maximum 4 projects per user
-  - Project description and details
+  - Limit of 4 projects per user
+  - Detailed project descriptions
 
 - **Task Management**
   - Create/update/delete tasks
-  - Three task statuses: Open, In Progress, Completed
-  - Task descriptions and due dates
-  - Visual status indicators
+  - Three statuses: Open • In Progress • Completed
+  - Due dates with calendar picker
+  - Automatic completion timestamps
 
-- **UI Components**
+- **UI/UX**
   - Responsive design
   - Animated modals
-  - Interactive calendar for due dates
-  - Clean and modern interface
-  - Form validation and error handling
+  - Interactive status indicators
+  - Real-time updates
+  - Form validation & error handling
 
-## Technologies Used
+## Technologies Used 💻
 
-- **Frontend**
-  - React + TypeScript
+- **Core**
+  - React 18
+  - TypeScript
+  - Vite
+
+- **UI Library**
   - Shadcn UI Components
-  - Framer Motion (animations)
-  - date-fns (date formatting)
-  - Lucide React (icons)
+  - Framer Motion (Animations)
+  - Lucide React (Icons)
 
-- **State Management**
-  - React useState/useEffect
-  - LocalStorage persistence
+- **Utilities**
+  - date-fns (Date formatting)
+  - LocalStorage (Data persistence)
 
-## Installation
+## Installation ⚙️
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/task-tracker.git
    cd task-tracker
-Install dependencies
+
+  Install dependencies
 
 bash
 npm install
-Install required packages
+Start development server
 
 bash
-npm install date-fns lucide-react framer-motion @types/node
-Start the development server
+npm run dev
+Open in browser
 
-bash
-npm start
-Usage
+http://localhost:5173
+
+Usage Guide 📖
 Authentication
 
-Create a new account using the Sign Up button
+Click "Sign Up" to create new account
 
-Use existing credentials to log in
+Use "Login" for existing users
 
-Log out using the logout button in the navbar
+Logout from navbar menu
 
 Projects
 
-Click "Create Project" in the navbar
+Click "+ Create Project" in navbar
 
-Fill in project name and description
+Enter project name & description
 
-View all projects in the Projects tab
+View all projects in Projects tab
 
 Tasks
 
-Select a project and click "Create Task"
+Select project ➔ "Create Task"
 
-Add task title, description, status, and due date
+Add title, description & due date
 
-Edit or delete tasks using the action buttons
+Update status using dropdown
 
-Filter tasks by status in the Tasks tab
+Edit/delete using action buttons
 
-Data Persistence
+Data Management
 
-All data is automatically saved to localStorage
+All data auto-saves to localStorage
 
-Data persists between sessions and page refreshes
+Persists across sessions/page refreshes
 
-Folder Structure
+Folder Structure 📂
 task-tracker/
+├── public/
 ├── src/
-│   ├── components/
-│   │   ├── ui/          # UI components (Button, Input, etc.)
-│   │   └── ...          # Other custom components
-│   ├── lib/             # Utility functions
-│   ├── App.tsx          # Main application component
-│   └── index.tsx        # Entry point
-├── public/              # Static assets
-└── tsconfig.json        # TypeScript configuration
-Future Improvements
-Add task priority levels
-
-Implement drag-and-drop task ordering
-
-Add project progress tracking
-
-Implement dark mode
-
-Add task search/filter functionality
-
-Contributing
-Fork the project
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-License
-Distributed under the MIT License. See LICENSE for more information.
+│   ├── components/      # Reusable components
+│   ├── types/           # TypeScript interfaces
+│   ├── App.tsx          # Root component
+│   └── main.tsx         # Entry point
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+└── README.md
